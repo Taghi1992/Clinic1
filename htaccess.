@@ -1,0 +1,13 @@
+Options -Indexes
+
+<FilesMatch "^(config\.php|database\.sql|\.htaccess)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<Directory "uploads">
+    php_flag engine off
+</Directory>
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
